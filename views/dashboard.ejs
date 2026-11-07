@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo Dashboard</title>
+</head>
+<body>
+
+  <h1>My Todo Dashboard</h1>
+
+  <h2>Add a New Task</h2>
+
+  <form id="todoForm">
+    <label for="title">Task Title:</label>
+    <input type="text" id="title" required>
+    <br><br>
+
+    <label for="due_date">Due Date:</label>
+    <input type="datetime-local" id="due_date" required>
+    <br><br>
+
+    <button type="submit">Add Task</button>
+  </form>
+
+  <h2>My Tasks</h2>
+  <div id="todoList">
+    Loading tasks...
+  </div>
+
+  <h2>Notifications</h2>
+  <p id="notification">Waiting for notifications...</p>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/script.js"></script>
+
+</body>
+</html>
