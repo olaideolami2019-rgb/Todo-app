@@ -29,6 +29,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // ROUTES
+app.get("/", (req, res) => {
+  res.redirect("/login");
+});
+
 app.use("/auth", authRoutes);
 app.use("/todos", todoRoutes);
 
